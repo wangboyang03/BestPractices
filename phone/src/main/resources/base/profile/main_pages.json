@@ -5,6 +5,7 @@
     "views/DistributeEvenlyPage",
     "views/CaptureMarketSharePage",
     "views/ScalingCapabilityPage",
-    "views/ExtensibilityPage"
+    "views/ExtensibilityPage",
+    "views/DisplayCase"
   ]
 }
