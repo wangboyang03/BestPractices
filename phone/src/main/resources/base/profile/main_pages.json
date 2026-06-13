@@ -8,6 +8,7 @@
     "views/ExtensibilityPage",
     "views/DisplayCase",
     "views/MovieListPage",
-    "views/GridPage"
+    "views/GridPage",
+    "views/HomePageTopBarPage"
   ]
 }

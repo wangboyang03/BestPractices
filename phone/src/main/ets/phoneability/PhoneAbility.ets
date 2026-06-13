@@ -26,7 +26,7 @@ export default class PhoneAbility extends UIAbility {
     this.ScreenManager = new ScreenManager(this.context)
     this.ScreenManager.init()
 
-    windowStage.loadContent('views/MovieListPage', (err) => {
+    windowStage.loadContent('views/HomePageTopBarPage', (err) => {
       if (err.code) {
         hilog.error(DOMAIN, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err));
         return;
