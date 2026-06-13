@@ -3,6 +3,8 @@
     "pages/Index",
     "views/AxialCapacityPage",
     "views/DistributeEvenlyPage",
-    "views/CaptureMarketSharePage"
+    "views/CaptureMarketSharePage",
+    "views/ScalingCapabilityPage",
+    "views/ExtensibilityPage"
   ]
 }

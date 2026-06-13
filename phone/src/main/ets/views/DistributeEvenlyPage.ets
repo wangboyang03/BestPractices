@@ -6,7 +6,7 @@ export interface NavItem {
 
 @Entry
 @Component
-struct AbilityDistributeEvenlyPage {
+struct DistributeEvenlyPage {
   readonly list: NavItem [] = [
     { id: 1, icon: $r('app.media.ic_nav_01'), title: '淘金币' },
     { id: 2, icon: $r('app.media.ic_nav_02'), title: '摇现金' },
