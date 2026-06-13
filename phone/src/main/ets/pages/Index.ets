@@ -1,23 +1,29 @@
+import { BreakPointType } from '../commons/BreakPointUtil';
+
 @Entry
 @Component
 struct Index {
-  @State message: string = 'Hello World';
+  @StorageProp('currentBreakpoint') currentBreakpoint: string = 'sm';
 
   build() {
-    RelativeContainer() {
-      Text(this.message)
-        .id('HelloWorld')
-        .fontSize($r('app.float.page_text_font_size'))
-        .fontWeight(FontWeight.Bold)
-        .alignRules({
-          center: { anchor: '__container__', align: VerticalAlign.Center },
-          middle: { anchor: '__container__', align: HorizontalAlign.Center }
-        })
-        .onClick(() => {
-          this.message = 'Welcome';
-        })
+    Flex({justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center}) {
+      Text(this.currentBreakpoint).fontSize(50).fontWeight(FontWeight.Medium)
+      Image(
+        new BreakPointType({
+          sm: $r('app.media.ic_nav_01'),
+          md: $r('app.media.ic_nav_02'),
+          lg: $r('app.media.ic_nav_03')
+        }).getValue(this.currentBreakpoint)
+      )
     }
-    .height('100%')
-    .width('100%')
+    .width(200)
+    .height(200)
+    .backgroundColor(
+      new BreakPointType({
+        sm: Color.Black,
+        md: Color.Red,
+        lg: Color.Green
+      }).getValue(this.currentBreakpoint)
+    )
   }
 }
