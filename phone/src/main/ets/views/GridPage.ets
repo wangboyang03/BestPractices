@@ -11,13 +11,36 @@ struct GridPage {
       //  md:(600vp<=width<840vp) 折叠屏
       //  lg:(840vp<=width) 平板
       GridRow({
-        breakpoints: {
-          value: ['320vp','600vp', '860vp', '1440vp', '1600vp']
+        columns: {
+          // 在不同断点下每行的列数
+          xs: 2,
+          sm: 3,
+          md: 5,
+          lg: 8
+        },
+        gutter: {
+          // 主轴间距 交叉轴间距
+          x: 10,
+          y: 20
         }
       }) {
         ForEach(Array.from({ length: 12 }), (item: string, index: number) => {
-          GridCol() {
-            Text(index.toString())
+          GridCol({
+            span: {
+              // 在不同断点下每列元素所占的列数
+              xs: 1,
+              sm: 2,
+              md: 3,
+              lg: 4
+            },
+            offset: {
+              xs: 1,
+              sm: 2,
+              md: 3,
+              lg: 4
+            }
+          }) {
+            Text((index+1).toString())
           }
           .height(100)
           .border({ width: 1, color: Color.Black })
