@@ -1,4 +1,5 @@
 import { BreakPointType } from '../commons/BreakPointUtil'
+import { MediaQueryUtil } from '../commons/MediaQueryUtil'
 
 interface MovieItem {
   title: string
@@ -21,6 +22,16 @@ struct MovieListPage {
     { title: '电影标题9', img: $r('app.media.ic_video_grid_9') },
     { title: '电影标题10', img: $r('app.media.ic_video_grid_10') },
   ]
+  mediaQueryUtil?: MediaQueryUtil
+
+  aboutToAppear(): void {
+    this.mediaQueryUtil = new MediaQueryUtil()
+    this.mediaQueryUtil.register(this.getUIContext())
+  }
+
+  aboutToDisappear(): void {
+    this.mediaQueryUtil?.unregister()
+  }
 
   build() {
     Grid() {
@@ -28,7 +39,12 @@ struct MovieListPage {
         GridItem() {
           Column({ space: 10 }) {
             Image(item.img)
-              .borderRadius(10)
+              .borderRadius(new BreakPointType({
+                xs: 0,
+                sm: 10,
+                md: 30,
+                lg: 50
+              }).getValue(this.currentBreakpoint))
             Text(item.title)
               .width('100%')
               .fontSize(20)
