@@ -16,13 +16,13 @@ struct GridPage {
           xs: 2,
           sm: 3,
           md: 5,
-          lg: 8
+          lg: 7
         },
-        gutter: {
-          // 主轴间距 交叉轴间距
-          x: 10,
-          y: 20
-        }
+        // gutter: {
+        //   // 主轴间距 交叉轴间距
+        //   x: 10,
+        //   y: 20
+        // }
       }) {
         ForEach(Array.from({ length: 12 }), (item: string, index: number) => {
           GridCol({
@@ -37,13 +37,14 @@ struct GridPage {
               xs: 1,
               sm: 2,
               md: 3,
-              lg: 4
+              lg: 2
             }
           }) {
             Text((index+1).toString())
           }
           .height(100)
           .border({ width: 1, color: Color.Black })
+          .backgroundColor(Color.Pink)
         })
       }
       .width('90%')
