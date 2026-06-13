@@ -1,6 +1,8 @@
 {
   "src": [
     "pages/Index",
-    "views/AxialCapacityPage"
+    "views/AxialCapacityPage",
+    "views/DistributeEvenlyPage",
+    "views/CaptureMarketSharePage"
   ]
 }
