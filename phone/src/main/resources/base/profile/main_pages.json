@@ -7,6 +7,7 @@
     "views/ScalingCapabilityPage",
     "views/ExtensibilityPage",
     "views/DisplayCase",
-    "views/MovieListPage"
+    "views/MovieListPage",
+    "views/GridPage"
   ]
 }
