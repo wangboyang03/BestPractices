@@ -62,7 +62,7 @@ export default class PhoneAbility extends UIAbility {
       // 获取应用启动时的窗口尺寸失败
     })
 
-    windowStage.loadContent('pages/Index', (err) => {
+    windowStage.loadContent('views/MovieListPage', (err) => {
       if (err.code) {
         hilog.error(DOMAIN, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err));
         return;

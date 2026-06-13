@@ -6,6 +6,7 @@
     "views/CaptureMarketSharePage",
     "views/ScalingCapabilityPage",
     "views/ExtensibilityPage",
-    "views/DisplayCase"
+    "views/DisplayCase",
+    "views/MovieListPage"
   ]
 }
